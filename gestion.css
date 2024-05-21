@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #838383;
+}
+header {
+    background-color: #201e57;
+    color: #fff;
+    padding: 16.5px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+.gestion-title{
+    color: #fff;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+.article-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+.article-card h3 {
+    color: #201e57;
+    margin: 0;
+}
+.article-card p {
+    color: #333;
+    margin: 5px 0;
+}
+.article-card .actions {
+    margin-top: 20px;
+    text-align: right;
+}
+.article-card .button {
+    background-color: #201e57;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin: 0 5px;
+}
+.article-card .button:hover {
+    background-color: #3c3a88;
+}
+.article-card .button.reject {
+    background-color: #c00;
+}
+.article-card .button.reject:hover {
+    background-color: #e00;
+}

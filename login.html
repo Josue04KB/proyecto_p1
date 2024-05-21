@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de sesión</title>
+    <!--Este link es para importar estilos de la pagina Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!--Este link es para crear los estilos CSS-->
+    <link rel="stylesheet" href="login.css">
+</head>
+<!--
+    Dentro de este body esta todo el formulario para ingrear el registro
+-->
+    <body>
+        <!-- 
+            Todo este nav es la barra de navegacion donde se muestra un boton con el nombre ULEAM
+            para ir a la pagina de inicio y la que dice Registrar que es para ir al apartado
+            donde para registrarse.
+        -->
+        <header class="sticky-header">
+            <nav>
+                <div class="logo">ULEAM</div>
+                <ul class="nav-links">
+                    <li><a href="home.html">Inicio</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!--Este div lleva la clase container que lleva un estilo que hace que 
+        se vea como una caja pequeña-->
+        <div class="container">
+            <h2 class="centro">Inicie sesión </h2>
+            <!--Se crea el form con un ID para ser usado con el JavaScript-->
+            <form id="loginForm" class="opacity-75">
+                <!-- Bloque donde se ingresa el correo -->
+                <label for="email">Correo:</label>
+                <input type="email" id="email" name="email" placeholder="Correo electronico" required>
+                <!-- Bloque para ingresar contraseña -->
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" placeholder="Contraseña" required>
+                <!--Una cajita para recordar credenciales-->
+                <div class="forget">
+                    <label for=""><input type="checkbox">Recordar</label>
+                    <a href="#">Olvidé la Contraseña</a>
+                </div>
+                <!--Parte donde esta un link que lleva directo a la pagina de 
+                    registro
+                -->
+                <div class="login">
+                    <p>¿Aun no tiene cuenta?, <a href="Registro.html">Registrese</a></p>
+                </div>
+                
+                <button type="submit" class="login-button">Acceder</button>
+            </form>
+        </div>
+        <footer>
+            <p>&copy; 2024 Revistas Científicas de la ULEM. Todos los derechos reservados.</p>
+        </footer>
+
+        <script>
+            //Esto para obtener el ID del form creado
+            const form = document.getElementById('loginForm');
+            form.addEventListener('submit', function (event) {
+                // Estas 2 constantes son para obtener los valores que se ingresan del Form
+                const email = document.getElementById('email').value;
+                const password = document.getElementById('password').value;
+                //Esto es para verificar que los datos no esten vacios
+                if (!email || !password) {
+                    //Esta es la alerta que se muestra cuando estan vacios los campos
+                    alert('Por favor complete todos los campos');
+                    //Esta linea evita que se envie ese formulario vacio
+                    event.preventDefault();
+                    return;
+                }
+            });
+        </script>
+    </body>
+</html>
